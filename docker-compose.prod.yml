@@ -1,0 +1,32 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${APP_PORT}:3000
+    restart: unless-stopped
+    command: ["npm", "run", "start:server"]
+    environment:
+      APP_PORT: 3000
+      COOKIE_SECRET: ${COOKIE_SECRET}
+      FULL_VENDURE_HOST: ${FULL_VENDURE_HOST}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_SYNCHRONIZE: ${DB_SYNCHRONIZE}
+      #EMAIL CONFIG
+      SENDGRID_USERNAME: ${SENDGRID_USERNAME}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      STELLATE_PURGE_API_TOKEN: ${STELLATE_PURGE_API_TOKEN}
+      ASSETS_URL_PREFIX: ${ASSETS_URL_PREFIX}
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      #Plugins
+      ENABLE_ORDER_INVENTORY_APPROVAL: ${ENABLE_ORDER_INVENTORY_APPROVAL}
+    # depends_on:
+    #   - ldb
+    volumes:
+      - ./static:/usr/src/app/static

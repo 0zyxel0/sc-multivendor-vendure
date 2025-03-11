@@ -1,0 +1,33 @@
+#VENDURE CONFIG
+APP_ENV=dev
+APP_PORT=3000
+FULL_VENDURE_HOST=http://localhost
+ASSETS_URL_PREFIX=http://localhost:3000/assets/
+COOKIE_SECRET=vuviibgknf
+SUPERADMIN_USERNAME=superadmin
+SUPERADMIN_PASSWORD=superadmin
+
+#DB CONFIG
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=vendure
+DB_USERNAME=vendure
+DB_PASSWORD=vendure
+DB_SCHEMA=public
+DB_SYNCHRONIZE=false
+
+# SMTP Settings
+SENDGRID_USERNAME=
+SENDGRID_API_KEY=
+
+
+# STELLATE GRAPHQL CACHE TOKEN
+STELLATE_PURGE_API_TOKEN=something
+# Redis
+REDIS_HOST=localhost
+REDIS_PASSWORD=mysecurepassword
+# Bull JS Queue name, must be unique for each instance
+VENDURE_QUEUE_NAME=voucher
+
+#Plugins
+ENABLE_ORDER_INVENTORY_APPROVAL=false

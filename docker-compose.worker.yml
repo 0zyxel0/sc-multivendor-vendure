@@ -1,0 +1,13 @@
+services:
+  worker:
+    image: 0zyxel0/sc-superapp-storeworker:latest
+    command: ["npm", "run", "start:worker"]
+    volumes:
+      - .:/usr/src/app
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+
