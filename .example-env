@@ -26,8 +26,6 @@ STELLATE_PURGE_API_TOKEN=something
 # Redis
 REDIS_HOST=localhost
 REDIS_PASSWORD=mysecurepassword
-# Bull JS Queue name, must be unique for each instance
-VENDURE_QUEUE_NAME=voucher
-
+REDIS_PORT=6379
 #Plugins
 ENABLE_ORDER_INVENTORY_APPROVAL=false
